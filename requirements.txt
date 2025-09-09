@@ -6,11 +6,10 @@ langchain_huggingface
 langchain_community
 langchain-text-splitters
 langchain-chroma
+langchain_pinecone
 
 bitsandbytes
 unstructured
-
-git+https://github.com/langchain-ai/langchain-pinecone.git
 pinecone-client
 
 python-dotenv
