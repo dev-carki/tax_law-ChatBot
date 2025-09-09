@@ -1,0 +1,11 @@
+langchain 
+langchain_upstage
+langchain-huggingface 
+langchain-community 
+langchain-core 
+langchain-text-splitters 
+langchain-chroma
+langchain-chroma
+
+bitsandbytes 
+unstructured[pdf]
