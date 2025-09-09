@@ -2,7 +2,7 @@ from rag.config.path import PDF_PATH
 import os
 from dotenv import load_dotenv
 
-from langchain_community.document_loaders import UnstructuredPDFLoader
+# from langchain_community.document_loaders import UnstructuredPDFLoader
 from langchain.text_splitter import RecursiveCharacterTextSplitter
 from langchain_pinecone import PineconeVectorStore
 from langchain_upstage import UpstageEmbeddings, ChatUpstage
@@ -16,14 +16,22 @@ def init_rag():
         chunk_overlap=200,
     )
 
-    loader = UnstructuredPDFLoader(PDF_PATH)
-    document_list = loader.load_and_split(text_splitter=text_splitter)
+    # 새로 DB에 추가 할 경우
+    # loader = UnstructuredPDFLoader(PDF_PATH)
+    # document_list = loader.load_and_split(text_splitter=text_splitter)
+
+    # index_name = 'm14'
+    # database = PineconeVectorStore.from_documents(
+    #     documents=document_list,
+    #     embedding=embedding,
+    #     index_name=index_name
+    # )
 
     embedding = UpstageEmbeddings(model="solar-embedding-1-large")
-
+    
+    # DB 불러오기
     index_name = 'm14'
-    database = PineconeVectorStore.from_documents(
-        documents=document_list,
+    database = PineconeVectorStore.from_existing_index(
         embedding=embedding,
         index_name=index_name
     )

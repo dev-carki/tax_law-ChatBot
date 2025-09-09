@@ -13,3 +13,7 @@ unstructured
 pinecone-client
 
 python-dotenv
+
+libgl1
+tesseract-ocr
+poppler-utils
