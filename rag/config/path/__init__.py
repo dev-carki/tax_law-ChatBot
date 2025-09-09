@@ -1,0 +1,1 @@
+from .path import PDF_PATH
