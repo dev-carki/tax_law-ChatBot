@@ -9,6 +9,7 @@ from langchain_upstage import UpstageEmbeddings, ChatUpstage
 from langchain.chains import RetrievalQA
 
 def init_rag():
+    load_dotenv()
     # 청킹
     text_splitter = RecursiveCharacterTextSplitter(
         chunk_size=1500,

@@ -1,11 +1,16 @@
-langchain 
+streamlit
+
+langchain
 langchain_upstage
-langchain-huggingface 
-langchain-community 
-langchain-core 
-langchain-text-splitters 
-langchain-chroma
+langchain_huggingface
+langchain_community
+langchain-text-splitters
 langchain-chroma
 
-bitsandbytes 
-unstructured[pdf]
+bitsandbytes
+unstructured
+
+git+https://github.com/langchain-ai/langchain-pinecone.git
+pinecone-client
+
+python-dotenv
